@@ -1,0 +1,17 @@
+.post-header {
+    display: flex;
+    line-height: 30px;
+    padding: 16px;
+}
+
+.post-header img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.post-header span {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 8px;
+}

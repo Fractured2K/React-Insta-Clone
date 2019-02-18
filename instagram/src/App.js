@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import './reset.css';
 import './App.css';
 
-// import SearchBar from './Components/SearchBar/SearchBar';
+import SearchBar from './Components/SearchBar/SearchBar';
 import Post from './Components/Post/Post';
 
 class App extends Component {

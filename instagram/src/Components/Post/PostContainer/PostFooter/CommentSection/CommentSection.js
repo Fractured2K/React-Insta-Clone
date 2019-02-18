@@ -4,9 +4,12 @@ import PropTypes from 'prop-types';
 // Components
 import Comment from './Comment/Comment';
 
+// Styles
+import './CommentSection.css';
+
 const CommentSection = props => {
     return (
-        <div>
+        <div className="comment-section">
             {props.comments.map((comment, i) => (
                 <Comment comment={comment} key={i} />
             ))}

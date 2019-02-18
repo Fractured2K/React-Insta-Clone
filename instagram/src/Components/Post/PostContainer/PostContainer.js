@@ -2,12 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Components
-import CommentSection from '../CommentSection/CommentSection';
+import PostHeader from './PostHeader/PostHeader';
+import PostImage from './PostImage/PostImage';
+import PostFooter from './PostFooter/PostFooter';
+
+// Styles
+import './PostContainer.css';
 
 const PostContainer = props => {
     return (
-        <div>
-            <CommentSection comments={props.post.comments} />
+        <div className="post-container">
+            <PostHeader profileImage={props.post.thumbnailUrl} username={props.post.username} />
+            <PostImage image={props.post.imageUrl} />
+            <PostFooter likes={props.post.likes} comments={props.post.comments} timestamp={props.post.timestamp} />
         </div>
     )
 }

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import data from '../../dummy-data.js';
 
 // Components
-import PostContainer from '../PostContainer/PostContainer';
+import PostContainer from './PostContainer/PostContainer';
 
 class Post extends Component {
     constructor() {
