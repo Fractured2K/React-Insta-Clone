@@ -1,0 +1,26 @@
+.post-icons {
+    display: flex;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+}
+.sprite {
+    background: url("../../../../../instagram-sprite.png") no-repeat;
+}
+
+.icon-heart {
+    width: 25px; /* Icon width */
+    height: 25px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */
+    background-position: -182px -132px; /* Icon background position in sprite */
+}
+
+.icon-comment {
+    width: 25px; /* Icon width */
+    height: 25px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */
+    background-position: -188px -105px; /* Icon background position in sprite */
+}

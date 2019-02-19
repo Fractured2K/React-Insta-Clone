@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 // Dummy data
 import data from '../../dummy-data.js';
 
+// Styles
+import './Post.css';
+
 // Components
 import PostContainer from './PostContainer/PostContainer';
 
@@ -17,7 +20,7 @@ class Post extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 {this.state.post.map((post, i) => (
                     <PostContainer post={post} key={i} />
                 ))}

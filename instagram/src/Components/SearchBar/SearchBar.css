@@ -1,0 +1,9 @@
+.search-bar {
+    background: #fafafa;
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    color: #262626;
+    outline: 0;
+    padding: 3px 10px 3px 26px;
+    text-align: center;
+}
