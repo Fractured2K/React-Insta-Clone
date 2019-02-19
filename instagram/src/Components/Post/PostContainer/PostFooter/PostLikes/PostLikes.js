@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import PostIcons from './PostIcons/PostIcons';
+import PostIcons from '../PostIcons/PostIcons';
 
 import './PostLikes.css';
 
@@ -13,22 +13,31 @@ class PostLikes extends Component {
         super();
 
         this.state = {
-            likes: props.likes
+            likes: props.likes,
+            liked: false
         }
     }
 
     likePost = (e) => {
         e.preventDefault();
 
+        if (this.state.liked) {
+            return this.setState({
+                likes: this.state.likes - 1,
+                liked: !this.state.liked
+            })
+        }
+
         this.setState({
             likes: this.state.likes + 1,
+            liked: !this.state.liked
         })
     }
 
     render() {
         return (
             <div>
-                <PostIcons />
+                <PostIcons liked={this.state.liked} likePost={this.likePost} />
                 <span>{numberWithCommas(this.state.likes)} likes</span>
             </div>
         )

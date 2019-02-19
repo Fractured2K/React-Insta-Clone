@@ -18,6 +18,13 @@
     background-position: -182px -132px; /* Icon background position in sprite */
 }
 
+.icon-heart-liked {
+    width: 25px; /* Icon width */
+    height: 25px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */
+    background-position: -155px -132px; /* Icon background position in sprite */
+}
+
 .icon-comment {
     width: 25px; /* Icon width */
     height: 25px; /* Icon height */
