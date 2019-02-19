@@ -24,3 +24,10 @@
     display: inline-block; /* Display icon as inline block */
     background-position: -188px -105px; /* Icon background position in sprite */
 }
+
+.hotdog-menu {
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */
+    background-position: -100px -184px; /* Icon background position in sprite */
+}

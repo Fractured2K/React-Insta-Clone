@@ -1,0 +1,21 @@
+.add-comment {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #efefef;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    width: 100%;
+}
+
+.add-comment input {
+    border: none;
+    margin: 15px 0;
+    outline: none;
+    width: 100%;
+}
+
+.add-comment input::placeholder {
+    color: #ACACAC;
+    font-size: 14px;
+}

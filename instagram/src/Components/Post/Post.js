@@ -14,16 +14,25 @@ class Post extends Component {
         super();
 
         this.state = {
-            post: data
+            post: []
         }
+    }
+
+    componentDidMount = () => {
+        this.setState({
+            post: data
+        })
     }
 
     render() {
         return (
             <div className="container">
-                {this.state.post.map((post, i) => (
-                    <PostContainer post={post} key={i} />
-                ))}
+                {this.state.post.map((post, i) =>
+                    <PostContainer
+                        post={post}
+                        key={i}
+                    />
+                )}
             </div>
         )
     }
