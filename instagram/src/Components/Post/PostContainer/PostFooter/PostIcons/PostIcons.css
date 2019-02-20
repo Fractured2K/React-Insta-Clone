@@ -11,6 +11,10 @@
     background: url("../../../../../instagram-sprite.png") no-repeat;
 }
 
+.sprite-big {
+    background: url("../../../../../instagram-sprite-login.png") no-repeat;
+}
+
 .icon-heart {
     width: 25px; /* Icon width */
     height: 25px; /* Icon height */
@@ -37,4 +41,11 @@
     height: 24px; /* Icon height */
     display: inline-block; /* Display icon as inline block */
     background-position: -100px -184px; /* Icon background position in sprite */
+}
+
+.instagram-logo {
+    width: 175px; /* Icon width */
+    height: 51px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */
+    background-position: -98px -150px; /* Icon background position in sprite */
 }

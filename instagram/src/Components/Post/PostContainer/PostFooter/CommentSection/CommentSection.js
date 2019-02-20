@@ -18,12 +18,12 @@ class CommentSection extends Component {
         }
     }
 
-    addComment = (e, i) => {
+    addComment = (e, comment) => {
         e.preventDefault();
 
         const newComment = {
-            text: i,
-            username: 'Skyelar'
+            text: comment.comment,
+            username: comment.username
         }
 
         this.setState({

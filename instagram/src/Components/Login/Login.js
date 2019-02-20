@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Login.css';
+
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -30,11 +32,12 @@ class Login extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.handleLogin}>
+            <div className="form-container">
+                <form className="login-form" onSubmit={this.handleLogin}>
+                    <img className="sprite-big instagram-logo" src="../../instagram-sprite.png" alt="" />
                     <input type="text" name="username" onChange={this.handleChanges} placeholder="Username" value={this.state.username} />
                     <input type="text" name="password" onChange={this.handleChanges} placeholder="Password" value={this.state.password} />
-                    <button>Login</button>
+                    <button>Log in</button>
                 </form>
             </div>
         )

@@ -7,6 +7,7 @@ class AddComment extends Component {
         super(props)
 
         this.state = {
+            username: "",
             comment: ""
         }
     }
@@ -18,8 +19,16 @@ class AddComment extends Component {
     }
 
     addComment = e => {
+        const username = JSON.parse(localStorage.getItem('user'))
+
+        const newComment = {
+            username: username.username,
+            comment: this.state.comment
+        }
+
+        this.props.addComment(e, newComment)
+
         this.setState({ comment: "" })
-        this.props.addComment(e, this.state.comment)
     }
 
     render() {
