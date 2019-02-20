@@ -9,7 +9,6 @@ const PostIcons = (props) => {
                 <span onClick={props.likePost} className={`sprite ${props.liked ? 'icon-heart-liked' : 'icon-heart'}`}></span>
             </div>
 
-            {console.log(props.liked)}
             <div className="icon">
                 <span className="sprite icon-comment"></span>
             </div>

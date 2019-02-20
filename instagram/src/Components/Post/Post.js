@@ -1,7 +1,4 @@
-import React, { Component } from 'react';
-
-// Dummy data
-import data from '../../dummy-data.js';
+import React from 'react';
 
 // Styles
 import './Post.css';
@@ -9,33 +6,18 @@ import './Post.css';
 // Components
 import PostContainer from './PostContainer/PostContainer';
 
-class Post extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-            post: []
-        }
-    }
-
-    componentDidMount = () => {
-        this.setState({
-            post: data
-        })
-    }
-
-    render() {
-        return (
-            <div className="container">
-                {this.state.post.map((post, i) =>
-                    <PostContainer
-                        post={post}
-                        key={i}
-                    />
-                )}
-            </div>
-        )
-    }
+const Post = props => {
+    return (
+        <div className="container">
+            {console.log(props)}
+            {props.posts.map((post, i) =>
+                <PostContainer
+                    post={post}
+                    key={i}
+                />
+            )}
+        </div>
+    )
 }
 
 export default Post;
