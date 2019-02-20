@@ -6,7 +6,7 @@ import Post from '../Post/Post';
 const ShowPosts = props => {
     return (
         <div>
-            <SearchBar posts={props.posts} />
+            <SearchBar search={props.search} />
             <Post posts={props.posts} />
         </div>
     )

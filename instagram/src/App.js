@@ -17,6 +17,7 @@ const Authentication = authenticate(Login)(ShowPosts);
 class App extends Component {
   state = {
     posts: [],
+    filteredPosts: [],
     user: localStorage.getItem('user')
   }
 
@@ -26,7 +27,7 @@ class App extends Component {
     })
   }
 
-  loginHandle = (e, credentials) => {
+  handleLogin = (e, credentials) => {
     e.preventDefault();
 
     const newUser = {
@@ -39,10 +40,19 @@ class App extends Component {
     })
   }
 
+  handleSearch = (e, search) => {
+    const posts = this.state.posts.filter(post => post.username.includes(search))
+
+    this.setState({
+      filteredPosts: posts
+    })
+  }
+
+
   render() {
     return (
-      <div className="App">
-        <Authentication login={this.loginHandle} posts={this.state.posts} />
+      <div className="App" >
+        <Authentication login={this.handleLogin} posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} search={this.handleSearch} />
       </div>
     );
   }
