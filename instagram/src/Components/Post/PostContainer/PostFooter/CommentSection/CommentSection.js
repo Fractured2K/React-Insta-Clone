@@ -13,8 +13,6 @@ class CommentSection extends Component {
     constructor(props) {
         super(props)
 
-        console.log(props.comments)
-
         this.state = {
             comments: props.comments
         }
