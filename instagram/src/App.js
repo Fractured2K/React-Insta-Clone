@@ -30,6 +30,9 @@ class App extends Component {
   handleLogin = (e, credentials) => {
     e.preventDefault();
 
+    if (!credentials.username) return alert('Please enter a username!');
+    if (!credentials.password) return alert('Please enter a password!');
+
     const newUser = {
       username: credentials.username,
       password: credentials.password
@@ -37,6 +40,14 @@ class App extends Component {
 
     this.setState({
       user: localStorage.setItem('user', JSON.stringify(newUser))
+    })
+  }
+
+  handleLogout = (e) => {
+    e.preventDefault();
+
+    this.setState({
+      user: localStorage.removeItem('user')
     })
   }
 
@@ -48,11 +59,10 @@ class App extends Component {
     })
   }
 
-
   render() {
     return (
       <div className="App" >
-        <Authentication login={this.handleLogin} posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} search={this.handleSearch} />
+        <Authentication login={this.handleLogin} logout={this.handleLogout} posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} search={this.handleSearch} />
       </div>
     );
   }

@@ -49,3 +49,41 @@
     display: inline-block; /* Display icon as inline block */
     background-position: -98px -150px; /* Icon background position in sprite */
 }
+
+.icon-instagram-logo {
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */
+    background-position: -58px -104px; /* Icon background position in sprite */
+}
+
+.icon-instagram-text {
+    width: 103px; /* Icon width */
+    height: 29px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */
+    background-position: -136px 0; /* Icon background position in sprite */
+    margin-top: 7px;
+}
+
+.icon-explore {
+    width: 25px; /* Icon width */
+    height: 25px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */
+    background-position: -76px -210px; /* Icon background position in sprite */
+}
+
+
+.icon-person {
+   width: 25px; /* Icon width */
+   height: 25px; /* Icon height */
+   display: inline-block; /* Display icon as inline block */
+   background-position: -105px -158px; /* Icon background position in sprite */
+   cursor: pointer;
+}
+
+.pipe {
+    background-color: #262626;
+    height: 28px;
+    margin: 0 16px;
+    width: 1px;
+}

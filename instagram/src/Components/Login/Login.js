@@ -36,7 +36,7 @@ class Login extends Component {
                 <form className="login-form" onSubmit={this.handleLogin}>
                     <img className="sprite-big instagram-logo" src="../../instagram-sprite.png" alt="" />
                     <input type="text" name="username" onChange={this.handleChanges} placeholder="Username" value={this.state.username} />
-                    <input type="text" name="password" onChange={this.handleChanges} placeholder="Password" value={this.state.password} />
+                    <input type="password" name="password" onChange={this.handleChanges} placeholder="Password" value={this.state.password} />
                     <button>Log in</button>
                 </form>
             </div>
