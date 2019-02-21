@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 import PostIcons from '../PostIcons/PostIcons';
-
-import './PostLikes.css';
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+// Styled Components
+const PostLikesNumber = styled.span`
+    font-size: 14px;
+    font-weight: 600;
+`;
+
 
 class PostLikes extends Component {
     constructor(props) {
@@ -39,7 +45,7 @@ class PostLikes extends Component {
         return (
             <div>
                 <PostIcons liked={this.state.liked} likePost={this.likePost} />
-                <span>{numberWithCommas(this.state.likes)} likes</span>
+                <PostLikesNumber>{numberWithCommas(this.state.likes)} likes</PostLikesNumber>
             </div>
         )
     }
