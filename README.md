@@ -1,4 +1,4 @@
-#View instagram clone live at
+# View instagram clone live at
 - https://instaclonereact.netlify.com/
 
 # React-Insta-Clone
