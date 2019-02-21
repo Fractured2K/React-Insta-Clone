@@ -1,4 +1,5 @@
 .post-content-img {
     width: 100%;
     object-fit: cover;
+    max-width: 614px;
 }
