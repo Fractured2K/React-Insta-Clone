@@ -1,7 +1,29 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './AddComment.css';
+// Styled Components
+const AddCommentContainer = styled.form`
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #efefef;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    width: 100%;
+
+    input {
+        border: none;
+        margin: 15px 0;
+        outline: none;
+        width: 100%;
+
+        &::placeholder {
+            color: #ACACAC;
+            font-size: 14px;
+        }
+    }
+`;
 
 class AddComment extends Component {
     constructor(props) {
@@ -34,10 +56,10 @@ class AddComment extends Component {
 
     render() {
         return (
-            <form className="add-comment" onSubmit={this.addComment}>
+            <AddCommentContainer onSubmit={this.addComment}>
                 <input name="comment" placeholder="Add a comment..." value={this.state.comment} onChange={this.handleChanges} />
                 <span className="sprite hotdog-menu"></span>
-            </form>
+            </AddCommentContainer>
         )
     }
 }
