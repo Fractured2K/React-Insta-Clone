@@ -1,13 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './PostImage.css';
+const PostContent = styled.div`
+    max-width: 614px;
+
+    img {
+         width: 100%;
+         object-fit: cover;
+    }
+`;
 
 const PostImage = props => {
     return (
-        <div className="post-content">
-            <img className="post-content-img" src={props.image} alt="" />
-        </div>
+        <PostContent className="post-content">
+            <img src={props.image} alt="" />
+        </PostContent>
     )
 }
 
