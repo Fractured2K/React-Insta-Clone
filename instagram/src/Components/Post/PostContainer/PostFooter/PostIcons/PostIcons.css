@@ -62,7 +62,7 @@
     height: 29px; /* Icon height */
     display: inline-block; /* Display icon as inline block */
     background-position: -136px 0; /* Icon background position in sprite */
-    margin-top: 7px;
+    margin-top: 3px;
 }
 
 .icon-explore {
