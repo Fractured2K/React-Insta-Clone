@@ -1,22 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// Styles
-import './Post.css';
+import styled from 'styled-components';
 
 // Components
 import PostContainer from './PostContainer/PostContainer';
 
+// Styled Components
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+`;
+
 const Post = props => {
     return (
-        <div className="container">
+        <Container>
             {props.posts.map((post, i) =>
                 <PostContainer
                     post={post}
                     key={i}
                 />
             )}
-        </div>
+        </Container>
     )
 }
 

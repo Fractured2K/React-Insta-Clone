@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+// Styled Components
 const Header = styled.header`
     display: flex;
     justify-content: center;
