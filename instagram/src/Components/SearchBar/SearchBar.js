@@ -57,8 +57,8 @@ class SearchBar extends Component {
         })
     }
 
-    handleSearch = (e) => {
-        this.props.search(e, this.state.search)
+    handleSearch = () => {
+        this.props.search(this.state.search)
     }
 
     render() {

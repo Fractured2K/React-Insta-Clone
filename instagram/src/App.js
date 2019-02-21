@@ -33,12 +33,7 @@ class App extends Component {
     })
   }
 
-  handleLogin = (e, credentials) => {
-    e.preventDefault();
-
-    if (!credentials.username) return alert('Please enter a username!');
-    if (!credentials.password) return alert('Please enter a password!');
-
+  handleLogin = credentials => {
     const newUser = {
       username: credentials.username,
       password: credentials.password
@@ -57,7 +52,7 @@ class App extends Component {
     })
   }
 
-  handleSearch = (e, search) => {
+  handleSearch = search => {
     const posts = this.state.posts.filter(post => post.username.includes(search))
 
     this.setState({
@@ -68,7 +63,12 @@ class App extends Component {
   render() {
     return (
       <AppContainer>
-        <Authentication login={this.handleLogin} logout={this.handleLogout} posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts} search={this.handleSearch} />
+        <Authentication
+          login={this.handleLogin}
+          logout={this.handleLogout}
+          posts={this.state.filteredPosts.length > 0 ? this.state.filteredPosts : this.state.posts}
+          search={this.handleSearch}
+        />
       </AppContainer>
     );
   }

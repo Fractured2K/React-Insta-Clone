@@ -54,13 +54,26 @@ const LoginForm = styled.form`
     }
 `;
 
+const LoginValidation = styled.p`
+    width: 258px;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0 5px;
+    padding: 10px 2px;
+    color: #dc3545;
+    background:#f8d7da;
+    border-radius: 5px;
+    border: 1px solid #f8d7da;
+`;
+
 class Login extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
             username: '',
-            password: ''
+            password: '',
+            error: false
         }
     }
 
@@ -71,12 +84,16 @@ class Login extends Component {
     }
 
     handleLogin = e => {
+        e.preventDefault();
+
+        if (this.state.username.length === 0 || this.state.password.length === 0) return this.setState({ error: true })
+
         const credentials = {
             username: this.state.username,
             password: this.state.password
         }
 
-        this.props.login(e, credentials)
+        this.props.login(credentials)
 
         this.setState({ item: "" })
     }
@@ -88,6 +105,7 @@ class Login extends Component {
                     <img className="sprite-big instagram-logo" src="../../instagram-sprite.png" alt="" />
                     <input type="text" name="username" onChange={this.handleChanges} placeholder="Username" value={this.state.username} />
                     <input type="password" name="password" onChange={this.handleChanges} placeholder="Password" value={this.state.password} />
+                    {this.state.error ? <LoginValidation>Please enter a username and password</LoginValidation> : null}
                     <button>Log in</button>
                 </LoginForm>
             </LoginContainer>
