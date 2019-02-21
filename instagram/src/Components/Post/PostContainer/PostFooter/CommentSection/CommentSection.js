@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
 // Components
 import Comment from './Comment/Comment';
 import PostDate from '../PostDate/PostDate';
 import AddComment from '../AddComment/AddComment';
 
-// Styles
-import './CommentSection.css';
+// Styled Components
+const CommentSectionContainer = styled.div`
+    margin: 5px 0;
+`;
 
 class CommentSection extends Component {
     constructor(props) {
@@ -33,7 +36,7 @@ class CommentSection extends Component {
 
     render() {
         return (
-            <div className="comment-section" >
+            <CommentSectionContainer>
                 {
                     this.state.comments.map((comment, i) => (
                         <Comment comment={comment} key={i} />
@@ -42,7 +45,7 @@ class CommentSection extends Component {
 
                 <PostDate timestamp={this.props.timestamp} />
                 <AddComment addComment={this.addComment} />
-            </div>
+            </CommentSectionContainer>
         )
     }
 }
