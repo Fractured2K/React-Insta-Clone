@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import PostIcons from '../PostIcons/PostIcons';
 
@@ -42,6 +43,10 @@ class PostLikes extends Component {
             </div>
         )
     }
+}
+
+PostLikes.propTypes = {
+    likes: PropTypes.number
 }
 
 export default PostLikes;

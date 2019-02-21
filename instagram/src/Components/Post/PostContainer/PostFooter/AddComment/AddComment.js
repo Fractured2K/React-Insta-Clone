@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 import './AddComment.css';
 
@@ -39,6 +40,10 @@ class AddComment extends Component {
             </form>
         )
     }
+}
+
+AddComment.propTypes = {
+    addComment: PropTypes.func
 }
 
 export default AddComment;

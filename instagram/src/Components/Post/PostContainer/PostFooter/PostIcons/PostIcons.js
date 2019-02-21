@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './PostIcons.css';
 
@@ -14,6 +15,11 @@ const PostIcons = (props) => {
             </div>
         </div>
     )
+}
+
+PostIcons.propTypes = {
+    liked: PropTypes.bool,
+    likePost: PropTypes.func
 }
 
 export default PostIcons;

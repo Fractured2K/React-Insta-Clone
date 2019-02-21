@@ -11,3 +11,4 @@ const authenticate = LoginComponent => ShowPostsComponent => props => {
 }
 
 export default authenticate;
+

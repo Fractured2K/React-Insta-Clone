@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './SearchBar.css';
 
 class SearchBar extends Component {
     constructor(props) {
         super(props)
-        console.log(props)
+
         this.state = {
             search: ''
         }
@@ -51,6 +52,11 @@ class SearchBar extends Component {
             </header>
         )
     }
+}
+
+SearchBar.propTypes = {
+    search: PropTypes.func,
+    logout: PropTypes.func
 }
 
 export default SearchBar;
